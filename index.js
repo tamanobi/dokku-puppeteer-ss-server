@@ -29,6 +29,8 @@ const crawler = async (url) => {
     const elenemts = document.querySelectorAll('title');
     return [].map.call(elenemts, el => el.innerText);
   });
+  const jpgBuf = await page.screenshot({ fullPage: true, type: 'jpeg' });
+
   await browser.close();
-  return newsTitles;
+  return jpgBuf;
 }
