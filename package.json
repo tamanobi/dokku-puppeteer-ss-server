@@ -1,0 +1,13 @@
+{
+  "name": "dokku-puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "tamanobi <tamanobi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "puppeteer": "^1.12.1"
+  }
+}
