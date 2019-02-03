@@ -6,6 +6,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get('/', async (ctx, next) => {
+  ctx.assert(ctx.request.query.u, 403, 'Parameter u is required!');
   const url = ctx.request.query.u
   const status = await crawler(url)
   status.headers.forEach((v) => {
